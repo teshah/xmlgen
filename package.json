@@ -1,0 +1,16 @@
+{
+  "name": "xmlgen",
+  "version": "1.0.0",
+  "description": "Generate xml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "xmlbuilder":"latest",
+    "swig":"latest"
+  },
+  "author": "",
+  "license": "ISC"
+}
