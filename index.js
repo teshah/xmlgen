@@ -12,13 +12,13 @@ var output = template({
 });
 console.log(output);
 
-var fs = require('fs');
 let id = 235;
 let filename = 'file_prefix_' + id + '.xml';
-var stream = fs.createWriteStream(filename);
-stream.once('open', function(fd) {
-  stream.write(output);
-  stream.end();
+var fs = require('fs');
+fs.writeFile(filename, output, function (err) {
+  if (err) return console.log(err);
+  console.log('generated output to ' + filename);
 });
-console.info("Generated " + filename);
-process.exit();
+
+
+// process.exit();
